@@ -1,0 +1,35 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    function Product(xyz){
+        console.log(xyz);
+        return (
+            <div class="col-xl-3">
+                {/*this is use multiline comment in react */}
+               <img src={xyz.path} alt=""class ="img-fluid"/>
+               <h2>{xyz.price}</h2>
+               <p>{xyz.name}</p>
+               <p><button>Add cart</button></p>
+            </div>
+        )
+    }
+    var record = (
+        <div class="container">
+            <div class="row">
+                <Product name="Product 1" price ="1500/-" path ="https://rukminim1.flixcart.com/image/612/612/l2tcfbk0/t-shirt/e/n/f/s-22p3099j3035i902-united-colors-of-benetton-original-image2pfhggbwmzt.jpeg?q=70"></Product>
+                <Product name="Product 2" price ="2500/-" path ="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/r/f/n/s-kid-165-s-elabot-original-imaggsqwkfsuraze.jpeg?q=70"></Product>
+                <Product name="Product 3" price ="3500/-" path="https://rukminim1.flixcart.com/image/612/612/kyrlifk0/t-shirt/0/u/s/l-tdgyblhenful-d37-tripr-original-imagax9x6pkgwwg9.jpeg?q=70"></Product>
+                <Product name="Product 4" price ="3500/-"path="https://rukminim1.flixcart.com/image/612/612/l09w8sw0/t-shirt/v/l/f/xl-bmrgyrn-z12-blive-original-imagc3pjxhbqwgh5.jpeg?q=70"></Product>
+
+            </div>
+        </div>
+    )
+    ReactDOM.render(record, document.getElementById("root"));
+</script>
